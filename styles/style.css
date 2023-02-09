@@ -31,10 +31,6 @@ main > *{
     min-height: 90vh;
 }
 
-nav{
-    padding-top: 20px;
-}
-
 nav a{
     color: var(--primary-color);
     text-decoration: none;
@@ -51,6 +47,14 @@ nav li{
     list-style: none;
     display: inline-block;
     margin-left: 1rem;
+    margin-top: 1.7vh;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+nav li:hover{
+    background-color: var(--bg-color);
 }
 
 header{
@@ -63,9 +67,26 @@ header{
     width: 100vw;
 }
 
+.home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.profilephoto > img{
+    height: 70vh;
+    border: var(--primary-color) 10px solid;
+    border-radius: 50%;
+}
+
 .about > p{
     margin: auto;
-    padding: 2rem;
+    text-align: justify;
+}
+
+section:nth-child(2n){
+    text-align: right;
 }
 
 h1{
