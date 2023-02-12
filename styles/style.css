@@ -5,6 +5,7 @@
     --header-color: black;
     --bg-color: #282A3A;
     --primary-color: #FFC93C;
+    --link-hover: white;
 }
 
 *{
@@ -20,40 +21,36 @@ body{
     height: 100vh;
 }
 main{
-    padding-top: 10vh;
-}
-
-main *{
-    padding: 1rem;
+    padding: 10vh 1rem 1rem 1rem;
 }
 
 main > *{
     min-height: 90vh;
+    padding-top: 1rem;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    list-style: none;
+    margin-left: 1rem;
 }
 
 nav a{
     color: var(--primary-color);
     text-decoration: none;
-    
-}
-
-nav a:hover{
-    color: white;
-    
-}
-
-
-nav li{
-    list-style: none;
-    display: inline-block;
-    margin-left: 1rem;
-    margin-top: 1.7vh;
+    display: block;
     box-sizing: border-box;
     border-radius: 5px;
     padding: 0.5rem;
+    flex-basis: auto;
+    margin-top: 1.7vh;
 }
 
-nav li:hover{
+nav a:hover{
+    color: var(--link-hover);
     background-color: var(--bg-color);
 }
 
@@ -65,6 +62,7 @@ header{
     
     background-color: var(--header-color);
     width: 100vw;
+    z-index: 2;
 }
 
 .home{
@@ -81,12 +79,38 @@ header{
 }
 
 .about > p{
-    margin: auto;
+    margin: 1rem auto;
     text-align: justify;
+}
+
+.about ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.about li{
+    list-style-position: inside;
 }
 
 section:nth-child(2n){
     text-align: right;
+}
+
+.cardcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contact, .projects {
+    position: relative;
+    top: -2rem;
+    z-index: 0;
+}
+
+.contact{
+    min-height: 80vh;
 }
 
 h1{
@@ -96,4 +120,43 @@ h1{
 
 h2{
     font-size: 1.5rem;
+}
+
+.card{
+    border: var(--primary-color) 2px solid;
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    padding-top: 0;
+}
+
+.card a{
+    font-size: 5rem;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+.card a:visited{
+    color: var(--primary-color);
+}
+
+.card a:hover{
+    color: var(--link-hover);
+}
+
+footer{
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--header-color);
+    width: 98.6vw;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
 }
