@@ -24,9 +24,10 @@ main{
     padding: 10vh 1rem 1rem 1rem;
 }
 
-main > *{
-    min-height: 90vh;
+section{
+    height: 90vh;
     padding-top: 1rem;
+    display: flex;
 }
 
 nav ul{
@@ -73,15 +74,21 @@ header{
 
 
 .profilephoto > img{
-    height: 70vh;
+    width: 70vh;
     border: var(--primary-color) 10px solid;
     border-radius: 50%;
 }
 
-.about > p{
-    margin: 1rem auto;
+.about, .projects, .contact{
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about p{
     text-align: justify;
 }
+
+
 
 .about ul{
     display: flex;
@@ -91,6 +98,7 @@ header{
 
 .about li{
     list-style-position: inside;
+    text-align: left;
 }
 
 section:nth-child(2n){
@@ -110,16 +118,19 @@ section:nth-child(2n){
 }
 
 .contact{
-    min-height: 80vh;
+    height: 80vh;
 }
 
 h1{
     font-size: 3rem;
     padding-top: 5rem;
+    margin-bottom: 1rem;
 }
 
 h2{
     font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
 }
 
 .card{
@@ -155,8 +166,45 @@ footer{
     flex-direction: column;
     justify-content: center;
     background-color: var(--header-color);
-    width: 98.6vw;
+    width: 100%;
     margin: 0;
     padding: 0;
     z-index: 2;
+}
+
+
+@media screen and (max-width: 48em){
+    
+    .home{
+        flex-direction: column;
+        margin-bottom: 4rem;
+    }
+
+
+    nav ul{
+        justify-content: space-around;
+    }
+
+    .profilephoto{
+        margin: auto; 
+    }
+
+    .profilephoto > img{
+        width: 80vw;
+    }
+
+    h1:first-child{
+        padding-top: 1rem;
+    }
+    .about, .projects{
+        padding-top: 5rem;
+    }
+
+    .about ul{
+        flex-direction: column;
+    }
+    .contact{
+        height: 70vh;
+    }
+
 }
