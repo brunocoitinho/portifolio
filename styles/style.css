@@ -34,7 +34,8 @@ nav ul{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 1rem;
+    flex-basis: auto;
+    gap: 2rem;
     list-style: none;
     margin-left: 1rem;
 }
@@ -42,12 +43,12 @@ nav ul{
 nav a{
     color: var(--primary-color);
     text-decoration: none;
-    display: block;
+    display: flex;
     box-sizing: border-box;
     border-radius: 5px;
     padding: 0.5rem;
-    flex-basis: auto;
-    margin-top: 1.7vh;
+    justify-content: center;
+    align-items: center;
 }
 
 nav a:hover{
@@ -64,6 +65,10 @@ header{
     background-color: var(--header-color);
     width: 100vw;
     z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .home{
@@ -72,9 +77,14 @@ header{
     justify-content: space-between;
 }
 
+.profilephoto{
+    justify-self: center;
+    align-self: center;
+}
+
 
 .profilephoto > img{
-    width: 70vh;
+    width: 80vh;
     border: var(--primary-color) 10px solid;
     border-radius: 50%;
 }
@@ -135,7 +145,11 @@ h2{
 
 .card{
     border: var(--primary-color) 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
+    box-sizing: border-box;
     height: 100px;
     width: 100px;
     text-align: center;
@@ -145,10 +159,11 @@ h2{
 .card a{
     font-size: 5rem;
     display: block;
-    box-sizing: border-box;
-    border-radius: 5px;
-    padding: 0.5rem;
     text-decoration: none;
+}
+
+a > i{
+    padding: 16px;
 }
 
 .card a:visited{
@@ -180,9 +195,20 @@ footer{
         margin-bottom: 4rem;
     }
 
+    header{
+        justify-content: space-around;
+    }
+
 
     nav ul{
         justify-content: space-around;
+        margin-left: auto;
+        gap: 10vw
+    }
+
+    nav a{
+        color: var(--link-hover);
+        background-color: var(--bg-color);
     }
 
     .profilephoto{
