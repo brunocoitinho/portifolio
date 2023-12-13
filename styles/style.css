@@ -11,6 +11,7 @@
 *{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 body{
@@ -154,12 +155,21 @@ h2{
     width: 100px;
     text-align: center;
     padding-top: 0;
+    transition: 200ms;
 }
 
 .card a{
     font-size: 5rem;
     display: block;
     text-decoration: none;
+}
+
+.card .print{
+    object-fit: cover;
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+    transition: 200ms;
 }
 
 a > i{
@@ -172,6 +182,16 @@ a > i{
 
 .card a:hover{
     color: var(--link-hover);
+}
+
+.card-print:hover{
+    height: 200px;
+    width:200px;
+}
+
+.card-print:hover img{
+    height: 190px;
+    width: 190px;
 }
 
 footer{
@@ -207,8 +227,8 @@ footer{
     }
 
     nav a{
-        color: var(--link-hover);
-        background-color: var(--bg-color);
+        background-color: #282a3a78;
+        border: 1px solid var(--primary-color);
     }
 
     .profilephoto{
@@ -231,6 +251,23 @@ footer{
     }
     .contact{
         height: 70vh;
+    }
+
+    .cardcontainer{
+        flex-direction: column;
+        align-items: center;
+        height: 50vh;
+        justify-content: space-around;
+    }
+
+    .card-print{
+        height: 200px;
+        width: 200px;
+    }
+
+    .print{
+        height: 190px;
+        width: 190px;
     }
 
 }
