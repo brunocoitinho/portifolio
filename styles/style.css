@@ -256,18 +256,20 @@ footer{
     .cardcontainer{
         flex-direction: column;
         align-items: center;
-        height: 50vh;
+        height: 60vh;
         justify-content: space-around;
     }
 
-    .card-print{
-        height: 200px;
-        width: 200px;
+    .card-print, .card-print:hover{
+        height: 150px;
+        width: 300px;
     }
 
-    .print{
-        height: 190px;
-        width: 190px;
+    .card .print, .card-print:hover img {
+        height: 140px;
+        width: 290px;
+        object-position: center top;
     }
+
 
 }
