@@ -5,13 +5,7 @@
     --header-color: black;
     --bg-color: #282A3A;
     --primary-color: #FFC93C;
-    --link-hover: white;
-}
-
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+    --link-active: white;
 }
 
 body{
@@ -19,257 +13,82 @@ body{
     color: var(--primary-color);
     font-family: var(--main-font);
     font-weight: bold;
-    height: 100vh;
-}
-main{
-    padding: 10vh 1rem 1rem 1rem;
 }
 
-section{
-    height: 90vh;
-    padding-top: 1rem;
-    display: flex;
+header, footer{
+    background-color: var(--header-color);
 }
 
-nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-basis: auto;
-    gap: 2rem;
-    list-style: none;
-    margin-left: 1rem;
-}
-
-nav a{
+.nav-link, .fa-brands{
     color: var(--primary-color);
-    text-decoration: none;
-    display: flex;
-    box-sizing: border-box;
-    border-radius: 5px;
-    padding: 0.5rem;
-    justify-content: center;
-    align-items: center;
 }
 
-nav a:hover{
-    color: var(--link-hover);
+.fa-brands:hover{
+    color: white;
+}
+
+.nav-link:hover{
+    color: var(--link-active);
+}
+
+.nav-pills .nav-link.active{
+    color: var(--link-active);
     background-color: var(--bg-color);
 }
 
-header{
-    height: 10vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    
-    background-color: var(--header-color);
-    width: 100vw;
-    z-index: 2;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.home{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.profilephoto{
-    justify-self: center;
-    align-self: center;
-}
-
-
-.profilephoto > img{
-    width: 80vh;
-    border: var(--primary-color) 10px solid;
+#foto-perfil img{
+    height: 75vh;
+    border: 10px solid var(--primary-color);
     border-radius: 50%;
+
 }
 
-.about, .projects, .contact{
-    flex-direction: column;
-    gap: 2rem;
+#skills, #contacts{
+    min-height: 80vh;
 }
 
-.about p{
-    text-align: justify;
+#projects{
+    min-height: 100vh;
 }
 
-
-
-.about ul{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-
-.about li{
-    list-style-position: inside;
-    text-align: left;
-}
-
-section:nth-child(2n){
-    text-align: right;
-}
-
-.cardcontainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.contact, .projects {
-    position: relative;
-    top: -2rem;
-    z-index: 0;
-}
-
-.contact{
-    height: 80vh;
-}
-
-h1{
-    font-size: 3rem;
-    padding-top: 5rem;
-    margin-bottom: 1rem;
-}
-
-h2{
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    text-align: left;
-}
-
-.card{
-    border: var(--primary-color) 2px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    box-sizing: border-box;
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    padding-top: 0;
-    transition: 200ms;
-}
-
-.card a{
+i{
     font-size: 5rem;
-    display: block;
+}
+
+.contacts-icon, .carousel{
+    border: var(--primary-color) 2px solid;
+    padding: 4px; 
+}
+
+.carousel{
+    width: 50vw;
+    height:50vh;
+    overflow: hidden;
+}
+
+.carousel-item img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel-item a{
+    color: white;
     text-decoration: none;
 }
 
-.card .print{
-    object-fit: cover;
-    height: 90px;
-    width: 90px;
-    border-radius: 10px;
-    transition: 200ms;
+.carousel-item a:hover{
+    text-decoration: underline;
 }
 
 a > i{
-    padding: 16px;
-}
-
-.card a:visited{
     color: var(--primary-color);
 }
 
-.card a:hover{
-    color: var(--link-hover);
-}
-
-.card-print:hover{
-    height: 200px;
-    width:200px;
-}
-
-.card-print:hover img{
-    height: 190px;
-    width: 190px;
-}
-
-footer{
-    height: 10vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--header-color);
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    z-index: 2;
+a > i:hover{
+    color: white;
 }
 
 
-@media screen and (max-width: 48em){
-    
-    .home{
-        flex-direction: column;
-        margin-bottom: 4rem;
-    }
-
-    header{
-        justify-content: space-around;
-    }
-
-
-    nav ul{
-        justify-content: space-around;
-        margin-left: auto;
-        gap: 10vw
-    }
-
-    nav a{
-        background-color: #282a3a78;
-        border: 1px solid var(--primary-color);
-    }
-
-    .profilephoto{
-        margin: auto; 
-    }
-
-    .profilephoto > img{
-        width: 80vw;
-    }
-
-    h1:first-child{
-        padding-top: 1rem;
-    }
-    .about, .projects{
-        padding-top: 5rem;
-    }
-
-    .about ul{
-        flex-direction: column;
-    }
-    .contact{
-        height: 70vh;
-    }
-
-    .cardcontainer{
-        flex-direction: column;
-        align-items: center;
-        height: 60vh;
-        justify-content: space-around;
-    }
-
-    .card-print, .card-print:hover{
-        height: 150px;
-        width: 300px;
-    }
-
-    .card .print, .card-print:hover img {
-        height: 140px;
-        width: 290px;
-        object-position: center top;
-    }
-
-
+#skills-nav .active{
+    background-color: #ffffff4f;
 }
