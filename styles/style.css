@@ -92,3 +92,14 @@ a > i:hover{
 #skills-nav .active{
     background-color: #ffffff4f;
 }
+
+@media screen and (max-width: 576px){
+    #foto-perfil{
+        display: flex;
+        justify-content: center;
+    }
+
+    #foto-perfil img{
+        height: 50vh;
+    }
+}
